@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './user';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
  topics=['computer science', 'Information system' , 'Other'];
 
+
+ userModel = new User('Lila','lila@gmail,com',3567,'','morning',true);
 }
