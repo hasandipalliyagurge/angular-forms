@@ -19,7 +19,12 @@
     <div class="form-group">
       <label>Phone</label>
       <input type="tel" required class="form-control" #phone="ngModel"  pattern="^\d{10}$" [class.is-invalid]="phone.invalid && phone.touched" [(ngModel)]='userModel.phone' name="phone">
-    <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone is required and must be 10 digits</small>
+    <!-- <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone is required and must be 10 digits</small> -->
+    <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+      <!-- error property on the ng ngModel -->
+      <small class="text-danger" *ngIf="phone.errors.required">phone number is required</small>
+      <small class="text-danger"*ngIf="phone.errors.pattern">phone number must be 10 digits</small>
+    </div>
     </div>
     
     
