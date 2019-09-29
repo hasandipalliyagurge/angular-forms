@@ -10,5 +10,5 @@ export class AppComponent {
  topics=['computer science', 'Information system' , 'Other'];
 
 
- userModel = new User('Lila','lila@gmail,com',3567,'','morning',true);
+ userModel = new User('Lila','lila@gmail.com',+9476271431,'','morning',true);
 }
