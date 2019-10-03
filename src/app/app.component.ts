@@ -8,7 +8,16 @@ import { User } from './user';
 })
 export class AppComponent {
  topics=['computer science', 'Information system' , 'Other'];
+ topicHasError=true;
 
+ userModel = new User('Lila','lila@gmail.com',+9476271431,'default','morning',true);
 
- userModel = new User('Lila','lila@gmail.com',+9476271431,'','morning',true);
+ validateTopic(value){
+  if(value==='default'){
+    this.topicHasError=true;
+  }
+  else{
+    this.topicHasError=false;
+  }
+ }
 }
