@@ -2,7 +2,7 @@
 <div class="container-fluid">
   <h1 style="text-decoration: underline">Student Registration Form</h1>
   
-  <form #userForm="ngForm">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
 
     <!-- {{userForm.form.valid}} -->
     
