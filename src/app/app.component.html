@@ -1,7 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container-fluid">
-  <h1 style="text-decoration: underline">Student Registration Form</h1>
+<div class="card">
+  <h1 class="sm-jumbotron text-center mb-4" >Student Registration Form</h1>
   
+  <div class="pad">
   <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
 
     <!-- {{userForm.form.valid}} -->
@@ -65,6 +66,7 @@
     
 
   </form>
+</div>
 </div>
 
 <router-outlet></router-outlet>
