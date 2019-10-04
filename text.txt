@@ -1,0 +1,2 @@
+Basic express server that can recieve submitted data is created in enrollment.service.ts
+const PORT = 3000;
