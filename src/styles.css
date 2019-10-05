@@ -4,9 +4,10 @@
     padding: 1rem;
     font-family: 'Lucida Sans';
     background-color:rgb(116, 129, 116);
-    color: black;
+    color: white;
+    text-transform: uppercase;
 }
 
-.pad{
+.padd{
     padding: 5px 5px 5px 5px;
 }
