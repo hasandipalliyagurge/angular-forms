@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from './user';
 import { EnrollmentService } from './enrollment.service';
-
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,6 +13,7 @@ export class AppComponent {
 
  userModel = new User('Lila','lila@gmail.com',+9476271431,'default','morning',true);
 
+ user: User;
 constructor(private _enrollmentService: EnrollmentService) {}
 
  validateTopic(value){
@@ -24,6 +25,23 @@ constructor(private _enrollmentService: EnrollmentService) {}
   }
  }
 
+ ngOnInit() {
+  this.resetForm();
+}
+
+resetForm(form?:NgForm)
+{
+if(form != null)
+form.reset();  
+this.user={
+  name:'',
+  email:'',
+  phone:'',
+  topic:'',
+  timePreference:'',
+  subscribe:''
+}
+}
 onSubmit(){
  this._enrollmentService.enroll(this.userModel)
  .subscribe(
